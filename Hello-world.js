@@ -9,7 +9,7 @@ const YourApp = () => {
         justifyContent: 'center',
         alignItems: 'center',
       }}>
-// prints hello world in the center of the page! :) 
+//prints hello world in the center of the page! :) 
       <Text>Hello world!! :) </Text>
     </View>
   );
