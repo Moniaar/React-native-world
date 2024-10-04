@@ -10,7 +10,7 @@ An open source framework for building Android and iOS applications using React a
 2. __Components__ : At runtime, React Native creates the corresponding Android and iOS views for those You can think of components as blueprints. Whatever a function component returns is rendered as a React element. React elements let you describe what you want to see on the screen.
 
 ## Props
-Props is short for “properties”, as it lets you customize React components 
+Props is short for “properties”, as it lets you customize React components. The core components of react like "image" can be used to customized with that as well. 
 
 ## State
 ### Common Questions section
