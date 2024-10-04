@@ -31,6 +31,7 @@ const CatApp = () => {
 
 export default CatApp; 
 ```
+- To pass a JS object in JSX, you must wrap the object in another pair of curly braces: {{width: 200, height: 200}}. 
 
 ## State
 ### Common Questions section
