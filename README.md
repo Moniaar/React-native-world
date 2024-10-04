@@ -9,6 +9,10 @@ An open source framework for building Android and iOS applications using React a
 1. __view__ : In React Native, View uses Flexbox for its children’s layout in Android. 
 2. __Components__ : At runtime, React Native creates the corresponding Android and iOS views for those You can think of components as blueprints. Whatever a function component returns is rendered as a React element. React elements let you describe what you want to see on the screen.
 
+## Props
+Props is short for “properties”, as it lets you customize React components 
+
+## State
 ### Common Questions section
 1. Why would we want to use export default for a function?
 We use it to make the function usable throughout your app. 
