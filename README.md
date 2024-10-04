@@ -10,7 +10,27 @@ An open source framework for building Android and iOS applications using React a
 2. __Components__ : At runtime, React Native creates the corresponding Android and iOS views for those You can think of components as blueprints. Whatever a function component returns is rendered as a React element. React elements let you describe what you want to see on the screen.
 
 ## Props
-Props is short for “properties”, as it lets you customize React components. The core components of react like "image" can be used to customized with that as well. 
+Props is short for “properties”, as it lets you customize React components. The core components of react like "image" can be used to customized with that as well. Here is an example for it:
+```
+import React from 'react';
+import {Text, View, Image} from 'react-native';
+
+const CatApp = () => {
+  return (
+    <View>
+      <Image
+        source={{
+          uri: 'https://reactnative.dev/docs/assets/p_cat1.png',
+        }}
+        style={{width: 200, height: 200}}
+      />
+      <Text>Hello, I am your cat!</Text>
+    </View>
+  );
+};
+
+export default CatApp; 
+```
 
 ## State
 ### Common Questions section
