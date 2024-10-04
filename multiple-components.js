@@ -2,6 +2,7 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 
+// Cat is a child component
 const Cat = () => {
   return (
     <View>
@@ -10,6 +11,7 @@ const Cat = () => {
   );
 };
 
+// Cafe is a parent component, since it renders Cat
 const Cafe = () => {
   return (
     <View>
