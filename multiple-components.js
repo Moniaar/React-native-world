@@ -23,4 +23,5 @@ const Cafe = () => {
   );
 };
 
+// each of these cats are unique and can be customized with props
 export default Cafe;
