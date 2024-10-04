@@ -34,6 +34,7 @@ export default CatApp;
 - To pass a JS object in JSX, you must wrap the object in another pair of curly braces: {{width: 200, height: 200}}. 
 
 ## State
+Used in order to build something interactive, state is 
 ### Common Questions section
 1. Why would we want to use export default for a function?
 We use it to make the function usable throughout your app. 
