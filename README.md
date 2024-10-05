@@ -38,6 +38,20 @@ Used in order to build something interactive, state is like a component’s pers
 <q> As a general rule, use props to configure a component when it renders. Use state to keep track of any component data that you expect to change over time. <\q>
 ___
 You can add state to a component by calling React’s useState Hook. A Hook is a kind of function that lets you “hook into” React features. For example, useState is a Hook that lets you add state to function components.
+### UseState hook:
+You can use useState to track any kind of data: strings, numbers, Booleans, arrays, objects. For example, you can track the number of times a cat has been petted with
+```
+ const [timesPetted, setTimesPetted] = useState(0)!
+```
+Calling useState does two things:
+
+1. It creates a “state variable” with an initial value—in this case the state variable. 
+2. It creates a function to set that state variable’s value.
+It doesn’t matter what names you use. But it can be handy to think of the pattern as
+```
+ [<getter>, <setter>] = useState(<initialValue>)
+```
+ 
 ### Common Questions section
 1. Why would we want to use export default for a function?
 We use it to make the function usable throughout your app. 
