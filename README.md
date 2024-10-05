@@ -53,7 +53,8 @@ It doesn’t matter what names you use. But it can be handy to think of the patt
 ```
  ## TextInput
 Core Component that allows the user to enter text. It has an onChangeText prop that takes a function to be called every time the text changed, and an onSubmitEditing prop that takes a function to be called when the text is submitted. Text input is one of the ways the user interacts with the app.
-##Scrollview
+
+## Scrollview
 
 ### Common Questions section
 1. Why would we want to use export default for a function?
