@@ -35,7 +35,7 @@ export default CatApp;
 
 ## State
 Used in order to build something interactive, state is like a component’s personal data storage. State is useful for handling data that changes over time or that comes from user interaction hence, State gives your components memory!. 
-<q>As a general rule, use props to configure a component when it renders. Use state to keep track of any component data that you expect to change over time. <\q>
+<q> As a general rule, use props to configure a component when it renders. Use state to keep track of any component data that you expect to change over time. <\q>
 ### Common Questions section
 1. Why would we want to use export default for a function?
 We use it to make the function usable throughout your app. 
