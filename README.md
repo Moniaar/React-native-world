@@ -55,7 +55,10 @@ It doesn’t matter what names you use. But it can be handy to think of the patt
 Core Component that allows the user to enter text. It has an onChangeText prop that takes a function to be called every time the text changed, and an onSubmitEditing prop that takes a function to be called when the text is submitted. Text input is one of the ways the user interacts with the app.
 
 ## Scrollview
+a generic scrolling container that can contain multiple components and views. The scrollable items can be heterogeneous, and you can scroll both vertically and horizontally (by setting the horizontal property).
+It can be configured to allow paging through views using swiping gestures by using the pagingEnabled props. Swiping horizontally between views can also be implemented on Android using the ViewPager component. It works best to present a small number of things of a limited size. All the elements and views of a ScrollView are rendered, even if they are not currently shown on the screen. If you have a long list of items which cannot fit on the screen, you should use a FlatList. 
 
+## Flat list
 ### Common Questions section
 1. Why would we want to use export default for a function?
 We use it to make the function usable throughout your app. 
