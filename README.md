@@ -80,3 +80,4 @@ export default Cat;
 
 ### References:
 [Create a basic notes taking app](https://www.geeksforgeeks.org/how-to-create-a-basic-notes-app-using-react-native/) 
+[simple note taking app with dev website](https://dev.to/kartikbudhraja/building-a-simple-note-taking-app-with-react-2g2k) 
