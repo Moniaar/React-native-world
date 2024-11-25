@@ -82,6 +82,11 @@ const Cat = () => {
 
 export default Cat; 
 ```
+3. Can we write some text to display in View Component?
+   No, it will raise an error since you cannot have a text node as a child of a View component, example for this is the following code (which is invaild):
+   ```
+   <View> Some text </View>
+   ```
 
 ### References:
 [Create a basic notes taking app](https://www.geeksforgeeks.org/how-to-create-a-basic-notes-app-using-react-native/)
