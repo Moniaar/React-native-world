@@ -61,6 +61,7 @@ If you want the list to scroll horiziontaly, add the following property: horiznt
 - IndicatorStyle: it's a property inside the scrollview that shows you that line on the right when you scroll and it disappears when you stop scrolling, it can be either black or white or default which is the black itself. You should choose that based on your scrollview BG Colour. This property is declared before the style section in your ScrollView, like this:
 
   ``` <ScrollView indicatorStyle={"white"} style={{ flex: 1 }}> ```
+- Note: The screen does not need a View element if you have used a different component to make the screen scrollable like the Text component.
   
 ## Flat list
 A component that displays a scrolling list of changing, but similarly structured, data. FlatList works well for long lists of data, where the number of items might change over time. Unlike the more generic ScrollView, the FlatList only renders elements that are currently showing on the screen, not all the elements at once. It requires two props: data and renderItem. data is the source of information for the list. renderItem takes one item from the source and returns a formatted component to render. One of the most common uses for a list view is displaying data that you fetch from a server.
