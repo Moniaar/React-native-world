@@ -66,6 +66,9 @@ If you want the list to scroll horiziontaly, add the following property: horiznt
 ## Flat list
 A component that displays a scrolling list of changing, but similarly structured, data. FlatList works well for long lists of data, where the number of items might change over time. Unlike the more generic ScrollView, the FlatList only renders elements that are currently showing on the screen, not all the elements at once. It requires two props: data and renderItem. data is the source of information for the list. renderItem takes one item from the source and returns a formatted component to render. One of the most common uses for a list view is displaying data that you fetch from a server.
 
+## Stylesheet API
+Styling your components inside each one of them when you're making the tags sometimes isn't the best way (styling along the line while writing code is named "Inline styling") , especially if you want clean code. That's why we need to use a separate Stylesheet to gather all of our styles in one place like CSS stylesheet, and make our React-native main code more readable. 
+
 ### Common Questions section
 1. Why would we want to use export default for a function?
 We use it to make the function usable throughout your app. 
