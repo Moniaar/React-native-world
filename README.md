@@ -99,6 +99,103 @@ const menuItemsToDisplay = [
 ```
 1. First thing first we need to import it directly from the React Native package, since it is a core component.
 2. Next thing is adding the properties you want, data and render Item are essential as always! :).
+3. Now within the MenuItems component, you are going to render the FlatList component as follows:
+```
+const MenuItems = () => {
+  const renderItem = ({ item }) => <Item name={item.name} />;
+
+  return (
+    <View style={menuStyles.container}>
+      <Text style={menuStyles.headerText}>View Menu</Text>
+      <FlatList data={menuItemsToDisplay} keyExtractor={item => item.id} renderItem={renderItem}></FlatList>
+    </View>
+  );
+};
+```
+4. Notice here that you have provided the data prop with the name of the array you already have defined, which is menuItemsToDisplay. The renderItem method calls a call-back method which renders another component called Item. You can also see an additional prop called the keyExtractor being passed to the FlatList component. It instructs the list to use the id of each item as React keys.
+5. Next you'll define the Item component:
+```
+const Item = ({ name }) => (
+  <View style={menuStyles.innerContainer}>
+    <Text style={menuStyles.itemText}>{name}</Text>
+  </View>
+);
+```
+6. In the code above, the Item component takes name as the prop. And it renders name within a parent view. The Item component is rendered for every item in the array until it reaches the end. 
+And that’s it!.
+Here is the full code:
+```
+import { View, Text, StyleSheet, FlatList } from 'react-native';
+
+const menuItemsToDisplay = [
+  { name: 'Hummus', id: '1A' },
+  { name: 'Moutabal', id: '2B' },
+  { name: 'Falafel', id: '3C' },
+  { name: 'Marinated Olives', id: '4D' },
+  { name: 'Kofta', id: '5E' },
+  { name: 'Eggplant Salad', id: '6F' },
+  { name: 'Lentil Burger', id: '7G' },
+  { name: 'Smoked Salmon', id: '8H' },
+  { name: 'Kofta Burger', id: '9I' },
+  { name: 'Turkish Kebab', id: '10J' },
+  { name: 'Fries', id: '11K' },
+  { name: 'Buttered Rice', id: '12L' },
+  { name: 'Bread Sticks', id: '13M' },
+  { name: 'Pita Pocket', id: '14N' },
+  { name: 'Lentil Soup', id: '15O' },
+  { name: 'Greek Salad', id: '16Q' },
+  { name: 'Rice Pilaf', id: '17R' },
+  { name: 'Baklava', id: '18S' },
+  { name: 'Tartufo', id: '19T' },
+  { name: 'Tartufo', id: '20U' },
+  { name: 'Tiramisu', id: '21V' },
+  { name: 'Panna Cotta', id: '22W' },
+];
+
+const Item = ({ name }) => (
+  <View style={menuStyles.innerContainer}>
+    <Text style={menuStyles.itemText}>{name}</Text>
+  </View>
+);
+
+
+const MenuItems = () => {
+  const renderItem = ({ item }) => <Item name={item.name} />;
+
+  return (
+    <View style={menuStyles.container}>
+      <Text style={menuStyles.headerText}>View Menu</Text>
+      <FlatList
+        data={menuItemsToDisplay}
+        keyExtractor={(item) => item.id}
+        renderItem={renderItem}></FlatList>
+    </View>
+  );
+};
+
+const menuStyles = StyleSheet.create({
+  container: {
+    flex: 0.75,
+  },
+  innerContainer: {
+    paddingHorizontal: 40,
+    paddingVertical: 20,
+    backgroundColor: 'black',
+  },
+  headerText: {
+    color: 'white',
+    fontSize: 40,
+    flexWrap: 'wrap',
+    textAlign: 'center',
+  },
+  itemText: {
+    color: '#F4CE14',
+    fontSize: 36,
+  },
+});
+
+export default MenuItems;
+```
 ## Stylesheet API
 Styling your components inside each one of them when you're making the tags sometimes isn't the best way (styling along the line while writing code is, or the practice of keeping styles within a component’s render, is named "Inline styling") , especially if you want clean code. That's why we need to use a separate Stylesheet to gather all of our styles in one place like CSS stylesheet, and by moving styles away from the component’s render, you are making the code easier to understand. 
 You can create stylesheets specific to each component and keep the stylesheets within the same file as the component. This will keep the styles closer to the component and makes it easier to reference.
