@@ -67,9 +67,38 @@ If you want the list to scroll horiziontaly, add the following property: horiznt
 A component that displays a scrolling list of changing, but similarly structured, data. FlatList works well for long lists of data, where the number of items might change over time. Unlike the more generic ScrollView, the FlatList only renders elements that are currently showing on the screen, not all the elements at once. It requires two props: data and renderItem. data is the source of information for the list. renderItem takes one item from the source and returns a formatted component to render. One of the most common uses for a list view is displaying data that you fetch from a server. Doing large lists using ScrollView can make your users wait for a very long time and slow your app, that's why it's better to use Flat List comopnent to load faster. It does the job using something called Lazy Rendering.
 ### Lazy Rendering:
 Instead of rendering all at once we render only when the item in the list appear on the screen.
-- There are 2 main properties required when you use the FlatList component: *data* which represents the array that has the items inside of it, and *render item* which is a function that the flat list will use to go through each item in the array.
+- There are 2 main properties required when you use the FlatList component: *data* which represents the array that has the items inside of it, and *render item* which is a function that the flat list will use to go through each item in the array. You can also provide additional metadata like index to the renderItem. Here index is a number that corresponds to a particular item in the data array.
 - After that you need to make a function below and outside the return function that will tell the render item function how to exactly render your list.
-
+Example:
+Say you have this list of menu items you want to display on your app, it is declared as an array of objects. Each item contains a name representing the menu item’s name and a unique id:
+``` 
+const menuItemsToDisplay = [
+  { name: 'Hummus', id: '1A' },
+  { name: 'Moutabal', id: '2B' },
+  { name: 'Falafel', id: '3C' },
+  { name: 'Marinated Olives', id: '4D' },
+  { name: 'Kofta', id: '5E' },
+  { name: 'Eggplant Salad', id: '6F' },
+  { name: 'Lentil Burger', id: '7G' },
+  { name: 'Smoked Salmon', id: '8H' },
+  { name: 'Kofta Burger', id: '9I' },
+  { name: 'Turkish Kebab', id: '10J' },
+  { name: 'Fries', id: '11K' },	
+  { name: 'Buttered Rice', id: '12L' },
+  { name: 'Bread Sticks', id: '13M' },
+  { name: 'Pita Pocket', id: '14N' },
+  { name: 'Lentil Soup', id: '15O' },
+  { name: 'Greek Salad', id: '16Q' },
+  { name: 'Rice Pilaf', id: '17R' },
+  { name: 'Baklava', id: '18S' },
+  { name: 'Tartufo', id: '19T' },
+  { name: 'Tartufo', id: '20U' },
+  { name: 'Tiramisu', id: '21V' },
+  { name: 'Panna Cotta', id: '22W' },
+];
+```
+1. First thing first we need to import it directly from the React Native package, since it is a core component.
+2. Next thing is adding the properties you want, data and render Item are essential as always! :).
 ## Stylesheet API
 Styling your components inside each one of them when you're making the tags sometimes isn't the best way (styling along the line while writing code is, or the practice of keeping styles within a component’s render, is named "Inline styling") , especially if you want clean code. That's why we need to use a separate Stylesheet to gather all of our styles in one place like CSS stylesheet, and by moving styles away from the component’s render, you are making the code easier to understand. 
 You can create stylesheets specific to each component and keep the stylesheets within the same file as the component. This will keep the styles closer to the component and makes it easier to reference.
