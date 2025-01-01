@@ -67,7 +67,7 @@ If you want the list to scroll horiziontaly, add the following property: horiznt
 A component that displays a scrolling list of changing, but similarly structured, data. FlatList works well for long lists of data, where the number of items might change over time. Unlike the more generic ScrollView, the FlatList only renders elements that are currently showing on the screen, not all the elements at once. It requires two props: data and renderItem. data is the source of information for the list. renderItem takes one item from the source and returns a formatted component to render. One of the most common uses for a list view is displaying data that you fetch from a server. Doing large lists using ScrollView can make your users wait for a very long time and slow your app, that's why it's better to use Flat List comopnent to load faster. It does the job using something called Lazy Rendering.
 ### Lazy Rendering:
 Instead of rendering all at once we render only when the item in the list appear on the screen.
-- There are 2 main properties required when you use the FlatList component: ####data which represents the array that has the items inside of it, and render item which is a function that the flat list will use to go through each item in the array.
+- There are 2 main properties required when you use the FlatList component: *data* which represents the array that has the items inside of it, and *render item* which is a function that the flat list will use to go through each item in the array.
 - After that you need to make a function below and outside the return function that will tell the render item function how to exactly render your list.
 
 ## Stylesheet API
